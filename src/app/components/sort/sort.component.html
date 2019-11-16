@@ -1,0 +1,8 @@
+<div class='container-fluid'>
+  <mat-form-field class='col-xs-12 cp'>
+    <mat-label>Sort By</mat-label>
+    <mat-select [(value)]="selected" (selectionChange)='selectionChange($event)'>
+      <mat-option  *ngFor='let sortName of sortBy' [value]="sorting[sortName]">{{sorting[sortName]}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

@@ -1,0 +1,24 @@
+<ng-container *ngIf='gameTable?.length > 0; else noSuchGame'>
+  <div class='container-fluid'>
+    <div class='col-xs-12'>
+      <div class='table-header col-xs-12 cp mt-3 mb-3'>SPECIFICATION</div>
+      <table mat-table [dataSource]="gameTable" class="mat-elevation-z8 col-xs-12">
+
+        <ng-container matColumnDef="key">
+          <td mat-cell *matCellDef="let gameTable"> {{gameTable.key}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="value">
+          <td mat-cell *matCellDef="let gameTable"> {{gameTable.value}} </td>
+        </ng-container>
+      
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</ng-container>
+<ng-template #noSuchGame>
+  <div class='col-xs-12 no-game mt-3 mb-3'>
+    NO SUCH GAME FOUND
+  </div>
+</ng-template>

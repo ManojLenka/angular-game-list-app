@@ -1,0 +1,25 @@
+<div class='container-fluid cp'>
+  <div class='col-xs-12 cp'>
+    <app-search></app-search>
+  </div>
+
+  <div class='col-xs-12 cp'>
+    <app-paginator></app-paginator>
+  </div>
+
+  <ng-container *ngIf='(visibleGames$ | async).length > 0; else noSuchGame'>
+    <div class='col-xs-12 cp'>
+      <app-card-list></app-card-list>
+    </div>
+
+    <div class='col-xs-12 cp'>
+      <app-paginator></app-paginator>
+    </div>
+  </ng-container>
+
+  <ng-template #noSuchGame>
+    <div class='no-game col-xs-12 cp mt-3 mb-3'>
+      NO SUCH GAME FOUND!!
+    </div>
+  </ng-template>
+</div>

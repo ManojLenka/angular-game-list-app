@@ -1,0 +1,11 @@
+<mat-card class="card col-xs-12">
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu" class='card-img'>
+  <div class='icon-on-img' matTooltip="Global sales" matTooltipPosition="above">
+      <mat-icon fontSet="fa" fontIcon="fa-chart-line"></mat-icon>
+      <span>{{ game.Global_Sales }}</span>
+  </div>
+  <div class='col-xs-12 cp mat-custom-header'>
+    <div class='col-xs-12 cp mat-custom-title' [matTooltip]="game.Name" matTooltipPosition="above">{{ game.Name }}</div>
+    <div class='col-xs-12 cp mat-custom-subtitle'>{{ game.Platform }}  ({{ game.Year }})</div>
+  </div>
+</mat-card>

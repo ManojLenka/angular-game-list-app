@@ -1,0 +1,21 @@
+.mat-elevation-z8 {
+    font-size: 14px;
+}
+
+.table-header {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.87);
+}
+
+td.mat-cell {
+    &:first-of-type {
+        padding-right: 15px;
+        color: rgba(0, 0, 0, 0.87);
+        font-weight: 500;
+    }
+    &:last-of-type {
+        padding-right: 15px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+}
